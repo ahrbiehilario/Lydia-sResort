@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lydia's Resort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page" id="mainPage">
+
+        <section class="hero">
+            <div class="welcome-panel">
+                <div class="blob blob-one"></div>
+                <div class="blob blob-two"></div>
+                <div class="blob blob-three"></div>
+                <div class="blob blob-four"></div>
+
+                <p class="welcome-script">Hello, welcome</p>
+
+                <div class="intro">
+                    <h1>LYDIA'S RESORT</h1>
+                    <p>Spend an amazing<br>vacation at our<br>resort</p>
+                </div>
+
+                <button class="signin" id="signin">LOGIN</button>
+            </div>
+
+            <div class="content-panel">
+                <header class="navbar">
+                    <a href="#home" class="resort-logo" aria-label="Lydia's Resort Home">
+                        <img src="LOGO.jpg" alt="Lydia's Resort Logo">
+                    </a>
+
+                    <nav>
+                        <a href="#home" class="selected">Home</a>
+                        <a href="#resort" data-page="resort">Resort</a>
+                        <a href="#packages" data-page="packages">Packages</a>
+                    </nav>
+                </header>
+
+                <div class="photo-frame" id="home">
+                    <img src="background.jpg" alt="Lydia's Resort pool">
+                    <span class="line line-top"></span>
+                    <span class="line line-top-small"></span>
+                    <span class="line line-left"></span>
+                    <span class="line line-left-small"></span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="about" id="contacts">
+            <div class="about-copy">
+                <h2>Abouts <span>❧</span></h2>
+                <p>
+                    The Lydia's Resort Booking System is designed to digitalize the process of booking the resort. It allows the user to book, edit, delete, and monitor bookings through an organized and
+                    user-friendly interface. The system helps reduce scheduling conflicts and improves overall service efficiency. As well as make automatic reports.
+                </p>
+            </div>
+
+            <div class="socials">
+                <a href="https://www.instagram.com/lydiasresort3?stkn=cGFjZ2p6bWY0NWMw" aria-label="Instagram" class="social">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <circle cx="17.4" cy="6.8" r="1"></circle>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/share/18WXZMrbc2/" aria-label="Facebook" class="social">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M13.8 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5H17V3.9c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8.2v3h2.6v8h2.6z"></path>
+                    </svg>
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <div class="info-screen" id="infoScreen" aria-hidden="true">
+        <div class="info-backdrop"></div>
+        <div class="info-card">
+            <button class="close-screen" id="closeInfo" aria-label="Close">&times;</button>
+
+            <p class="screen-kicker">LYDIA'S RESORT</p>
+            <h2 id="infoTitle">Welcome</h2>
+            <div class="info-divider"></div>
+            <div id="infoContent"></div>
+        </div>
+    </div>
+
+    <div class="auth-screen" id="authScreen" aria-hidden="true">
+        <div class="auth-photo">
+            <img src="background.jpg" alt="Lydia's Resort">
+            <div class="auth-photo-overlay"></div>
+            <div class="auth-brand">
+                <span class="brand-script">Welcome to</span>
+                <strong>LYDIA'S RESORT</strong>
+                <p>Relax. Stay. Enjoy.</p>
+            </div>
+            <div class="auth-quote">
+                <span>“</span>
+                Your peaceful getaway<br>starts here.
+            </div>
+        </div>
+
+        <div class="auth-form-side">
+            <button class="auth-close" id="closeAuth" aria-label="Close">&times;</button>
+
+            <div class="auth-form-wrap">
+                <div class="auth-logo">
+                    <img src="LOGO.jpg" alt="Lydia's Resort Logo">
+                </div>
+
+                <div class="auth-heading">
+                    <span class="small-label" id="authSmallLabel">WELCOME BACK</span>
+                    <h2 id="authTitle">Sign in</h2>
+                    <p id="authSubtitle">Access your Lydia's Resort account to continue.</p>
+                </div>
+
+                <div class="auth-tabs">
+                    <button class="auth-tab active" id="loginTab" type="button">Login</button>
+                    <button class="auth-tab" id="signupTab" type="button">Create account</button>
+                </div>
+
+                <form id="loginForm" class="auth-form">
+                    <label for="loginEmail">Email address</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">✉</span>
+                        <input id="loginEmail" type="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <label for="loginPassword">Password</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">⌑</span>
+                        <input id="loginPassword" type="password" placeholder="Enter your password" required>
+                        <button class="show-password" type="button" data-target="loginPassword">Show</button>
+                    </div>
+
+                    <div class="form-row">
+                        <label class="check-label">
+                            <input type="checkbox">
+                            <span>Remember me</span>
+                        </label>
+                        <button type="button" class="text-button" id="forgotPassword">Forgot password?</button>
+                    </div>
+
+                    <button class="auth-submit" type="submit">LOGIN <span>→</span></button>
+
+                    <p class="switch-text">Don't have an account?
+                        <button type="button" class="text-button switch-signup">Create one</button>
+                    </p>
+                </form>
+
+                <form id="signupForm" class="auth-form hidden">
+                    <label for="signupName">Full name</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">♙</span>
+                        <input id="signupName" type="text" placeholder="Your full name" required>
+                    </div>
+
+                    <label for="signupEmail">Email address</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">✉</span>
+                        <input id="signupEmail" type="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <label for="signupPassword">Create password</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">⌑</span>
+                        <input id="signupPassword" type="password" placeholder="At least 8 characters" minlength="8" required>
+                        <button class="show-password" type="button" data-target="signupPassword">Show</button>
+                    </div>
+
+                    <label class="check-label terms">
+                        <input type="checkbox" required>
+                        <span>I agree to the resort's terms and privacy policy.</span>
+                    </label>
+
+                    <button class="auth-submit" type="submit">CREATE ACCOUNT <span>→</span></button>
+
+                    <p class="switch-text">Already have an account?
+                        <button type="button" class="text-button switch-login">Login</button>
+                    </p>
+                </form>
+
+                <p class="auth-message" id="authMessage"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
